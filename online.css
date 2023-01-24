@@ -2,11 +2,16 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 #layout {
@@ -25,7 +30,16 @@ html, body {
     width: 1fr;
     font-weight: bold;
     font-size: 36px;
+    padding: 0 10px;
     text-align: center;
+    color: white;
+    position: relative;
+}
+
+#back-icon {
+    position: absolute;
+    left: 10px;
+    top: 0;
     color: white;
 }
 
@@ -47,7 +61,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 #code {
@@ -76,4 +90,32 @@ html, body {
     color: #33312F;
     font-weight: bold;
     font-size: 24px;
+}
+
+#action-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    #code-container {
+        width: 70%;
+        height: 40%;
+    }
+
+    #content-body {
+        align-items: initial;
+        padding: 20px 0;
+    }
+
+    #code {
+        font-size: 40px;
+    }
+
+    #action-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 }
